@@ -12,6 +12,30 @@ The system consists of the following smart contracts:
 - **OracleConsumer.sol**: Example consumer contract that reads price and decimals from the Chainlink oracle using the minimal interface.
 - **IAggregatorInterfaceMinimal.sol**: Minimal interface for Chainlink-compatible oracles, defining `latestAnswer()` and `decimals()`.
 
+## How to Run and Test
+
+1. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+2. **Compile contracts**
+   ```bash
+   npx hardhat compile
+   ```
+
+3. **Run tests**
+   ```bash
+   npx hardhat test
+   ```
+
+4. **Deploy contracts (example script)**
+   ```bash
+   npx hardhat run scripts/deploy.js
+   ```
+
+This will compile, test, and deploy the contracts locally. See `test/oracle-integration.test.js` for integration tests and `scripts/deploy.js` for deployment logic.
+
 ## Contract Details
 
 ### IAggregatorInterfaceMinimal.sol
@@ -86,27 +110,3 @@ See `test/oracle-integration.test.js` for a full integration test suite covering
 
 ## License
 MIT
-
-## How to Run and Test
-
-1. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-2. **Compile contracts**
-   ```bash
-   npx hardhat compile
-   ```
-
-3. **Run tests**
-   ```bash
-   npx hardhat test
-   ```
-
-4. **Deploy contracts (example script)**
-   ```bash
-   npx hardhat run scripts/deploy.js
-   ```
-
-This will compile, test, and deploy the contracts locally. See `test/oracle-integration.test.js` for integration tests and `scripts/deploy.js` for deployment logic.
